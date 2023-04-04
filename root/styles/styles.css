@@ -59,6 +59,12 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
   }
+
+
+.info_container>div>a{
+    color: #1A202C;;
+    justify-content: space-between;
+}
   
 h1 {
     font-family: 'Plus Jakarta Sans';
@@ -72,7 +78,7 @@ h1 {
 
   }
 
-  p {
+p {
     display: flex;
     align-items: center;
     font-family: 'Plus Jakarta Sans';

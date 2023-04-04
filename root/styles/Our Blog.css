@@ -16,7 +16,7 @@ ul {
 
 header {
   background-color: #306BB3;
-  height: 10vh;
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +25,7 @@ header {
 
 header>div {
   height: 100%;
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +44,7 @@ header button {
   color: #306BB3 ;
   font-weight: 500;
   cursor: pointer;
+  padding: 0 2%;
 }
 
 .Header1{

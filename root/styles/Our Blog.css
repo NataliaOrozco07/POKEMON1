@@ -60,7 +60,7 @@ header button {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 300%;
   line-height: 150%;
 }
 
@@ -69,8 +69,12 @@ header button {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 100%;
   line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1A202C;
 }
 
 section{
@@ -79,6 +83,17 @@ section{
   align-items: center;
   gap: 50px;
   padding: 50px;
+}
+
+section>p{
+  display: flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100%;
+  line-height: 150%;
+  color: #1A202C;
 }
 
 footer {

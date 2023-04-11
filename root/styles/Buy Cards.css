@@ -223,7 +223,7 @@ footer>div>p{
     flex: none;
     order: 0;
     flex-grow: 0;
-    padding: 30px 5px;
+    padding: 0 5px;
 }
 
 footer>div>img{

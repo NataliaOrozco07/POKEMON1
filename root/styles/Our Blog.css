@@ -5,6 +5,27 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+body.darkMode {
+  background-color: #1A202C;;
+}
+
+.darkMode h1{
+  color: white;
+}
+
+.darkMode p{
+  color: white;
+}
+
+.darkMode a {
+  color:white;
+}
+
+body.lightMode {
+  background-color: white;
+  color: black;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -36,7 +57,7 @@ nav>ul {
   gap: 40px;
 }
 
-header button {
+.dark_mode {
   height: 40%;
   width: 20%;
   border: none;

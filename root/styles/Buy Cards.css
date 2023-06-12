@@ -36,7 +36,7 @@ nav>ul {
   gap: 40px;
 }
 
-header button {
+.dark_mode {
   height: 40%;
   width: 20%;
   border: none;

@@ -17,7 +17,11 @@ body.darkMode {
     color: white;
 }
 
-.darkMode a {
+.darkMode a{
+    color:white;
+}
+
+.darkMode>main>section>div>a{
     color:white;
 }
 

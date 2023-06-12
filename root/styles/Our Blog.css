@@ -17,6 +17,10 @@ body.darkMode {
   color: white;
 }
 
+.darkMode>main>div>p{
+  color: white;
+}
+
 .darkMode a {
   color:white;
 }

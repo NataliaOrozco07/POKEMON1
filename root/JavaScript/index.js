@@ -5,7 +5,7 @@ btnDarkMode.addEventListener("click", function () {
     colorBack.classList.toggle("darkMode");
 
     if (colorBack.classList.contains("darkMode")) {
-        btnDarkMode.textContent = "Light Mode";
+        btnDarkMode.textContent = "DM";
     } else {
         btnDarkMode.textContent = "Dark Mode";
     }

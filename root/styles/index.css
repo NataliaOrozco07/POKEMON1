@@ -6,7 +6,7 @@
 }
 
 body.darkMode {
-    background-color: #1A202C;;
+    background-color: #1A202C;
 }
 
 .darkMode h1{
@@ -23,11 +23,6 @@ body.darkMode {
 
 .darkMode>main>section>div>a{
     color:white;
-}
-
-body.lightMode {
-    background-color: white;
-    color: black;
 }
 
 a {

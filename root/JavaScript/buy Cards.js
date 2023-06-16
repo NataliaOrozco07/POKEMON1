@@ -1,12 +1,10 @@
-const btnDarkMode = document.querySelector(".dark_mode");
-const colorBack = document.body;
+document.addEventListener("DOMContentLoaded", function() {
+    const darkModeButton = document.querySelector(".dark_mode");
+    const body = document.querySelector("body");
 
-btnDarkMode.addEventListener("click", function () {
-    colorBack.classList.toggle("darkMode");
-
-    if (colorBack.classList.contains("darkMode")) {
-        btnDarkMode.textContent = "DM";
-    } else {
-        btnDarkMode.textContent = "Dark Mode";
-    }
+    darkModeButton.addEventListener("click", function() {
+        body.classList.toggle("darkMode");
+    });
 });
+
+let url = "https://pokeapi.co/api/v2";

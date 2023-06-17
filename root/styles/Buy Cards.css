@@ -160,7 +160,7 @@ section{
   align-items: center;
 }
 
-.card>div>button{
+.level>button{
   background: #306BB3;
   border-radius: 4px;
   width: 40%;

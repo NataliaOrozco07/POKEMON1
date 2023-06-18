@@ -7,15 +7,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-let url = "https://pokeapi.co/api/v2/pokemon";
+let url = "https://pokeapi.co/api/v2";
 const parentElement = document.querySelector(".grid-container")
 
 const pokePage = async (url) => {
     try {
         const res = await fetch(url);
         const data = await res.json();
+        
         data.results.forEach(async element => {
-            console.log(element)
+            
             const card = document.createElement("div");
             const divName = document.createElement("div");
             const namePke = document.createElement("p");
@@ -26,15 +27,20 @@ const pokePage = async (url) => {
             const bottonBuy = document.createElement("button");
 
             namePke.textContent = element.name;
-            console.log(element.name)
 
             const res = await fetch( element.url);
             const data = await res.json();
 
             img.src = data.sprites.front_default;
+            bottonBuy.textContent = 'Buy'
 
-            card.className = 'card'
-            divLevel.className = 'level'
+            card.className = 'card';
+            namePke.className ='name';
+            icon.className = "fa-sharp fa-regular fa-heart";
+            img.className = 'card';
+            divLevel.className = 'level';
+            levelPke.className = 'card'
+            bottonBuy.className = 'level';
 
             card.appendChild(divName);
             divName.appendChild(namePke);
@@ -52,4 +58,7 @@ const pokePage = async (url) => {
     }
 }
 
-pokePage(url)
+pokePage(url);
+
+const btnMore = document.querySelector(".moreCard");
+btnMore.addEventListener("click", pokePage);

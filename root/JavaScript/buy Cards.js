@@ -7,32 +7,39 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-let url = "https://pokeapi.co/api/v2";
-const parentElement = document.querySelector(".grid-container")
+let url = "https://pokeapi.co/api/v2/pokemon";
+const parentElement = document.querySelector(".grid-container");
+const btnMore = document.querySelector(".moreCard");    
+
+let next;
 
 const pokePage = async (url) => {
     try {
         const res = await fetch(url);
         const data = await res.json();
-        
-        data.results.forEach(async element => {
-            
+        console.log('pokemons', data);
+        next = data.next;
+        console.log('next url', next);
+
+        data.results.forEach(async pokemon => {
             const card = document.createElement("div");
             const divName = document.createElement("div");
-            const namePke = document.createElement("p");
             const icon = document.createElement("i");
             const img = document.createElement("img");
             const divLevel = document.createElement("div");
             const levelPke = document.createElement("p");
             const bottonBuy = document.createElement("button");
+            const namePke = document.createElement("p");
 
-            namePke.textContent = element.name;
+            namePke.textContent = pokemon.name;
 
-            const res = await fetch( element.url);
-            const data = await res.json();
+            const res  = await fetch(pokemon.url);
+            const detallesPokemon = await res.json();
+            
+            img.src = detallesPokemon.sprites.front_default;
+            levelPke.textContent = detallesPokemon.base_experience;
 
-            img.src = data.sprites.front_default;
-            bottonBuy.textContent = 'Buy'
+            bottonBuy.textContent = 'Buy';
 
             card.className = 'card';
             namePke.className ='name';
@@ -60,5 +67,13 @@ const pokePage = async (url) => {
 
 pokePage(url);
 
-const btnMore = document.querySelector(".moreCard");
-btnMore.addEventListener("click", pokePage);
+const nextPage = function(next) {
+    btnMore.addEventListener("click", (next) = pokePage(next));
+}  
+
+
+
+
+
+
+

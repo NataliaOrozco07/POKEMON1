@@ -67,6 +67,7 @@ const pokePage = async (url) => {
 
 pokePage(url);
 
+
 const nextPage = function(next) {
     btnMore.addEventListener("click", (next) = pokePage(next));
 }  

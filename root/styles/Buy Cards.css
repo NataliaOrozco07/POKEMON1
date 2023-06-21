@@ -67,14 +67,6 @@ nav>ul {
   padding: 0 2%;
 }
 
-main{
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  padding: 5% 10%;
-  }
-
 h1{
   color: #486284;
   font-family: 'Plus Jakarta Sans';
@@ -93,51 +85,42 @@ h1{
 }
 
 .main-nav{
-  grid-column: 1/5;
-  border:#90A3BF;
-  padding: 50px;
-  margin: 30px;
-  height: 70px;
-  border-bottom: 1px solid #90A3BF;
-  align-items: center;
+display: flex;
+justify-content: space-around;
+width: 90%;
 }
 
-.main-nav:hover{
-  border-bottom: solid;
-  opacity: 0.7;   
+.nav-all:hover{
+  border-bottom: 2px solid #1A202C;
+  font-weight: bold;   
 }  
 
-main nav>ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 40px;
+.nav-all{
   color: #1A202C;
-  padding: 10px;
+  margin: 2% 0;
+  width: 100%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+  border-bottom: 2px solid #90a3bf;
+  text-align: center;
 }
 
-main nav>ul>li>a{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  gap: 40px;
-  color: #1A202C ;
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
+.nav-all a{
+  color: #1A202C;
 }
 
 section{
-  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  
 }
 
 .grid-container{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  justify-content: center;
-  gap: 2%;
+  margin-left: 2%;
   width: 90%;
 }
 
@@ -145,41 +128,36 @@ section{
   display: flex;
   flex-direction: column;
   background-color: #DEE5ED;
-  padding: 5%;
+  padding: 4%;
+  margin: 5% 0;
   border-radius: 10px;
+  width: 90%;
 }
 
-.card>div{
+.name,.level {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin: 5% 3%;
+  padding: 1% 5%;
   align-items: center;
 }
 
-.level>button{
-  background: #306BB3;
-  border-radius: 4px;
-  width: 40%;
-  justify-content: center;
-}
-
-.card>div>p {
-  color: #1A202C;
-  font-weight: bolder;
-  text-transform: initial;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.card>img{
+.imgPokemon {
   background: #FFFFFF;
   border-radius: 10px;
   padding: 5%;
   width: 90%;
-  margin: 0 5%;
+  margin: 5%;
   height: 80%;
+}
+
+.btnlevel {
+  background: #306BB3;
+  color: white;
+  border-radius: 4px;
+  width: 40%;
+  margin: 0;
+  padding: 5% 10%;
+  justify-content: center;
 }
 
 .more-cards{

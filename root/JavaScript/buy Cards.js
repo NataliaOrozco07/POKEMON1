@@ -9,10 +9,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const url = "https://pokeapi.co/api/v2/pokemon";
 const parentElement = document.querySelector(".grid-container");
+const countElement = document.querySelector('.count');
+let remainingCards = 0;
 
 const btnMore = document.querySelector(".moreCard");    
 let next;
 btnMore.addEventListener("click", () => pokePage(next));
+
+const navAll = document.querySelectorAll('.nav-al');
+navAll.forEach(item => {
+    item.addEventListener('click',() => filterByType(item.getAttribute('pokemonType')));
+});
 
 const pokePage = async (url) => {
     try {
@@ -21,6 +28,8 @@ const pokePage = async (url) => {
         console.log('pokemons', data);
         next = data.next;
         console.log('next url', next);
+
+        remainingCards = data.count;
 
         data.results.forEach(async pokemon => {
             const card = document.createElement("div");
@@ -64,7 +73,11 @@ const pokePage = async (url) => {
             card.appendChild(divLevel);
             divLevel.appendChild(levelPke);
             divLevel.appendChild(bottonBuy);
+
+            filterByType('All');
         });
+
+        countElement.textContent = `totalLoadCards: ${remainingCards}`;
     } catch (error){
         const errorMsg = document.createElement('p');
         errorMsg.textContent =`error : ${error.message}`
@@ -72,5 +85,22 @@ const pokePage = async (url) => {
     }
 };
 
+const filterByType = (type) => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach( card =>{
+        const cardType1 = card.getAttribute('pokemonType1');
+        const cardType2 = card.getAttribute('pokemonType2');
+        if (type === 'All' || cardType1 === type || cardType2 === type) {
+            card.classList.add('show');
+            card.classList.remove('hide');
+        } else{
+            card.classList.add('hide');
+            card.classList.remove('show');
+        }
+    });
+    countElement.textContent = `totalLoadCards: ${document.querySelectorAll('.card.show').length}`;
+};
+
 pokePage(url);
+
 

@@ -6,7 +6,7 @@
 }
 
 body.darkMode {
-  background-color: #1A202C;;
+  background-color: #1A202C;
 }
 
 .darkMode h1{
@@ -17,12 +17,8 @@ body.darkMode {
   color: white;
 }
 
-.darkMode a{
-  color:white;
-}
-
-.darkMode>main>div>nav{
-  color:white;
+.grid-container .card p {
+  color: #333;
 }
 
 a {
@@ -139,6 +135,7 @@ section{
   justify-content: space-between;
   padding: 1% 5%;
   align-items: center;
+  font-weight: bold;
 }
 
 .imgPokemon {
@@ -152,6 +149,7 @@ section{
 
 .btnlevel {
   background: #306BB3;
+  font-weight: bold;
   color: white;
   border-radius: 4px;
   width: 40%;
@@ -168,20 +166,7 @@ section{
   margin: 5% 0;
 }
 
-.moreCard{
-  background: #306BB3;
-  width: 156px;
-  height: 44px;
-  border-radius: 4px;
-  color: #FFFFFF;
-  display: flex;
-  border-style: none;
-  flex-direction: center;
-  align-items: center;
-  padding: 0px 20px;
-}
-
-.more-cards p{
+.count {
   color: #306BB3;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
@@ -190,6 +175,17 @@ section{
   line-height: 150%;
   display: flex;
   align-items: center;
+}
+
+.moreCard{
+  background: #306BB3;
+  color: #FFFFFF;
+  justify-content: center;
+  border-radius: 4px;
+  width: 30%;
+  margin: 0;
+  padding: 5% 10%;
+  width: 200p ;
 }
 
 footer {

@@ -13,6 +13,10 @@ body.darkMode {
   color: white;
 }
 
+.darkMode a{
+  color: white;
+}
+
 .darkMode p{
   color: white;
 }
@@ -105,6 +109,10 @@ width: 90%;
   color: #1A202C;
 }
 
+.hide{
+  visibility: hidden;
+}
+
 section{
   display: flex;
   flex-direction: column;
@@ -115,7 +123,7 @@ section{
 
 .grid-container{
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 25%);
   margin-left: 2%;
   width: 90%;
 }
@@ -163,7 +171,7 @@ section{
   justify-content: flex-end;
   align-items: center;
   gap: 50%;
-  margin: 5% 0;
+  padding: 5% 0;
 }
 
 .count {
@@ -178,14 +186,15 @@ section{
 }
 
 .moreCard{
-  background: #306BB3;
-  color: #FFFFFF;
-  justify-content: center;
+  color: white;
+  background-color: #306BB3;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
   border-radius: 4px;
-  width: 30%;
   margin: 0;
-  padding: 5% 10%;
-  width: 200p ;
+  gap: 20%;
+  padding: 5% 25%;
 }
 
 footer {

@@ -16,9 +16,10 @@ const btnMore = document.querySelector(".moreCard");
 let next;
 btnMore.addEventListener("click", () => pokePage(next));
 
-const navAll = document.querySelectorAll('.nav-al');
+const navAll = document.querySelectorAll('.nav-all');
 navAll.forEach(item => {
-    item.addEventListener('click',() => filterByType(item.getAttribute('pokemonType')));
+    console.log('miraos que es item',item, item.getAttribute('pokemontype'));
+    item.addEventListener('click',() => filterByType(item.getAttribute('pokemontype')));
 });
 
 const pokePage = async (url) => {
@@ -51,9 +52,9 @@ const pokePage = async (url) => {
             levelPke.textContent = detallesPokemon.base_experience;
 
             const [type1, type2] = detallesPokemon.types.map((pokeType) => pokeType.type.name)
-            console.log(type1);
-            card.setAttribute('pokemonType1', type1);
-            card.setAttribute('pokemonType2', type2);
+            console.log('esta es el type1 y el type2', type1, type2);
+            card.setAttribute('pokemontype1', type1);
+            card.setAttribute('pokemontype2', type2);
 
             card.className = 'card';
             divName.className= 'name'
@@ -74,7 +75,6 @@ const pokePage = async (url) => {
             divLevel.appendChild(levelPke);
             divLevel.appendChild(bottonBuy);
 
-            filterByType('All');
         });
 
         countElement.textContent = `totalLoadCards: ${remainingCards}`;
@@ -85,11 +85,14 @@ const pokePage = async (url) => {
     }
 };
 
+
 const filterByType = (type) => {
     const cards = document.querySelectorAll('.card');
-    cards.forEach( card =>{
-        const cardType1 = card.getAttribute('pokemonType1');
-        const cardType2 = card.getAttribute('pokemonType2');
+    cards.forEach( card => {
+        console.log('hola estan la funcion filter by type', card)
+        const cardType1 = card.getAttribute('pokemontype1');
+        const cardType2 = card.getAttribute('pokemontype2');
+        console.log ('Estamos mirando el cardType', cardType1, cardType2, type)
         if (type === 'All' || cardType1 === type || cardType2 === type) {
             card.classList.add('show');
             card.classList.remove('hide');
@@ -102,5 +105,6 @@ const filterByType = (type) => {
 };
 
 pokePage(url);
+
 
 

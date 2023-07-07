@@ -37,7 +37,7 @@ const pokePage = async (url) => {
             const res  = await fetch(pokemon.url);
             const detallesPokemon = await res.json();
             
-            img.src = detallesPokemon.sprites.front_default;
+            img.src = detallesPokemon.sprites.other["home"].front_default;
             levelPke.textContent = detallesPokemon.base_experience;
 
             const [type1, type2] = detallesPokemon.types.map((pokeType) => pokeType.type.name)

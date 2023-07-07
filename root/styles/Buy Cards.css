@@ -13,16 +13,12 @@ body.darkMode {
   color: white;
 }
 
-.darkMode a{
+.darkMode ul>li>a{
   color: white;
 }
 
 .darkMode p{
   color: white;
-}
-
-.grid-container .card p {
-  color: #333;
 }
 
 a {
@@ -85,10 +81,10 @@ h1{
 }
 
 .main-nav{
-display: flex;
-justify-content: space-around;
-width: 90%;
-}
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  }
 
 .nav-all:hover{
   border-bottom: 2px solid #1A202C;
@@ -107,6 +103,7 @@ width: 90%;
 
 .nav-all a{
   color: #1A202C;
+  font-weight: bolder;
 }
 
 .card.hide{
@@ -118,7 +115,6 @@ section{
   flex-direction: column;
   align-items: center;
   margin-top: 5%;
-  
 }
 
 .grid-container{
@@ -136,6 +132,11 @@ section{
   margin: 5% 0;
   border-radius: 10px;
   width: 90%;
+}
+
+.card p {
+  color: #070707;
+  font-weight: bold;
 }
 
 .name,.level {
@@ -174,17 +175,6 @@ section{
   padding: 5% 0;
 }
 
-.count {
-  color: #306BB3;
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 150%;
-  display: flex;
-  align-items: center;
-}
-
 .moreCard{
   color: white;
   background-color: #306BB3;
@@ -197,16 +187,22 @@ section{
   padding: 5% 25%;
 }
 
+.count {
+  color: #306BB3;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+}
+
 footer {
   padding: 5%;
   background-color: #306BB3;
   display: flex;
   justify-content: space-between;
-}
-
-.socialmedia>a{
-  font-size: 30px;
-  margin-right: 5%;
 }
 
 footer>div>p{
@@ -232,6 +228,11 @@ footer>div>img{
   top: 68px;
 }
 
+.socialmedia>a{
+  font-size: 30px;
+  margin-right: 5%;
+}
+
 footer>div:first-child{
   display: flex;
   flex-direction: column;
@@ -250,21 +251,15 @@ footer>div:last-child {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #FFFFFF;
+  gap: 20px;
 }
 
 .links_container>ul>p{
   color: #FFFFFF;
   font-weight: bold;
 }
-
-.info_links>ul{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  color: #FFFFFF;
-  mix-blend-mode: normal;
-  }

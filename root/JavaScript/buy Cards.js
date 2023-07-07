@@ -20,9 +20,7 @@ const pokePage = async (url) => {
     try {
         const res = await fetch(url);
         const data = await res.json();
-        console.log('pokemons', data);
         next = data.next;
-        console.log('next url', next);
 
         data.results.forEach(async pokemon => {
             const card = document.createElement("div");
@@ -78,21 +76,17 @@ const pokePage = async (url) => {
 
 const navAll = document.querySelectorAll('.nav-all');
 navAll.forEach((item) => {
-    console.log('miraos que es item',item, item.getAttribute('pokemontype'));
     item.addEventListener('click',() => {
-        const type = item.textContent.toLowerCase();
+        const type  = item.textContent.toLowerCase();
         filterByType(type);
-        console.log(type);
     });
 });
 
 const filterByType = (type) => {
     const cards = document.querySelectorAll('.card');
     cards.forEach( (card) => {
-        console.log('hola estan la funcion filter by type', card)
         const cardType1 = card.getAttribute('pokemontype1');
         const cardType2 = card.getAttribute('pokemontype2');
-        console.log ('Estamos mirando el cardType', cardType1, cardType2, type)
         if (type === 'all' || cardType1 === type || cardType2 === type) {
             card.classList.remove('hide');
         } else{

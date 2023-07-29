@@ -113,7 +113,7 @@ h1{
 }
 
 .active{
-  border-bottom: 2px solid #1A202C;
+  border-bottom: 2px solid fuchsia;
   font-weight: bold; 
 }
 

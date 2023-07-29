@@ -74,6 +74,10 @@ nav>ul {
   padding: 0 2%;
 }
 
+.heartColor{
+  color: red;
+}
+
 h1{
   color: #486284;
   font-family: 'Plus Jakarta Sans';

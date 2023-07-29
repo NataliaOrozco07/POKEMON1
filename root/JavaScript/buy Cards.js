@@ -5,7 +5,6 @@ let remainingCards = 0;
 const btnMore = document.querySelector(".moreCard");
 let next;
 btnMore.addEventListener("click", () => showMore(next));
-
 const showMore = async (url) => {
     try {
         const res = await fetch(url);
@@ -26,6 +25,7 @@ const showMore = async (url) => {
             } else if (type1 === navActive || type2 === navActive) {
                 drawCard(pokemon,detallesPokemon,type1,type2);
             }
+
         });
     } catch (error) {
         const errorMsg = document.createElement('p');
@@ -62,6 +62,7 @@ function drawCard(pokemon,detallesPokemon,type1, type2) {
     bottonBuy.className = 'btnlevel';
     bottonBuy.textContent = 'Buy';
 
+
     parentElement.appendChild(card);
     card.appendChild(divName);
     divName.appendChild(namePke);
@@ -74,9 +75,11 @@ function drawCard(pokemon,detallesPokemon,type1, type2) {
     remainingCards++;
     const carCount = document.querySelector('.count');
     carCount.textContent = `${remainingCards} cards`;
+
+    icon.addEventListener('click', (event) => {
+        icon.classList.toggle("heartColor");
+    });
 }
-
-
 
 const navAll = document.querySelectorAll('.nav-all');
 navAll.forEach((item) => {
@@ -89,6 +92,8 @@ navAll.forEach((item) => {
         filterByType(type);
     });
 });
+
+
 
 const filterByType = (type) => {
     const cards = document.querySelectorAll('.card');
@@ -104,6 +109,7 @@ const filterByType = (type) => {
 };
 
 showMore(url);
+
 
 
 

@@ -1,12 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const darkModeButton = document.querySelector(".dark_mode");
-    const body = document.querySelector("body");
-
-    darkModeButton.addEventListener("click", function() {
-        body.classList.toggle("darkMode");
-    });
-});
-
 const url = "https://pokeapi.co/api/v2/pokemon";
 const parentElement = document.querySelector(".grid-container");
 let remainingCards = 0;
@@ -47,7 +38,7 @@ const pokePage = async (url) => {
             card.className = 'card';
             divName.className= 'name'
             namePke.className ='pName';
-            icon.className = "fa-sharp fa-regular fa-heart";
+            icon.className = "fa fa fa-heart";
             img.className = 'imgPokemon'
             divLevel.className = 'level';
             levelPke.className = 'pLevel'
@@ -76,7 +67,11 @@ const pokePage = async (url) => {
 
 const navAll = document.querySelectorAll('.nav-all');
 navAll.forEach((item) => {
-    item.addEventListener('click',() => {
+    item.addEventListener('click',(event) => {
+        const active = document.querySelector('.active');
+        active.classList.replace('active','inactive');
+        event.target.classList.replace('inactive','active');
+        event.preventDefault();
         const type  = item.textContent.toLowerCase();
         filterByType(type);
     });

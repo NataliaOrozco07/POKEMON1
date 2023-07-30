@@ -17,20 +17,22 @@ body.darkMode {
   color: white;
 }
 
-.darkMode,.active {
-    color:white;
-}
   
 .darkMode p{
   color: white;
 }
 
-.darkMode,.active{
-  .active{
-    border-bottom: 2px solid pink;
-    font-weight: bold; 
-  }
+.darkMode .active{
+  border-bottom: 2px solid #306BB3;
+  font-weight: bold; 
+  color:#DEE5ED; 
 }
+
+.darkMode .inactive{
+  font-weight: bold; 
+  color:#DEE5ED; 
+}
+
 
 a {
   text-decoration: none;
@@ -117,7 +119,7 @@ h1{
 }
 
 .active{
-  border-bottom: 2px solid fuchsia;
+  border-bottom: 2px solid #306BB3;
   font-weight: bold; 
 }
 
